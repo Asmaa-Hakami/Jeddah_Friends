@@ -1,3 +1,5 @@
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 // We need statefull widget because we are gonna change some state on our category
@@ -13,8 +15,9 @@ class _CategoryListState extends State<CategoryList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 20.0 / 2),
-      height: 30,
+      margin: EdgeInsets.symmetric(vertical: 40.0 / 2),
+      height: 28,
+      //width: 600,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
@@ -27,20 +30,23 @@ class _CategoryListState extends State<CategoryList> {
           child: Container(
             alignment: Alignment.center,
             margin: EdgeInsets.only(
-              left: 20.0,
+              left: 30.0,
+              right: 10.0
               // At end item it add extra 20 right  padding
-              right: index == categories.length - 1 ? 20.0 : 0,
             ),
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            padding: EdgeInsets.symmetric(horizontal: 25.0),
             decoration: BoxDecoration(
               color: index == selectedIndex
-                  ? Colors.white.withOpacity(0.4)
-                  : Colors.transparent,
-              borderRadius: BorderRadius.circular(6),
+                  ? Color(0XFF25A1C0)
+                  : Colors.white,
+              borderRadius: BorderRadius.circular(35),
             ),
             child: Text(
               categories[index],
-              style: TextStyle(color: Colors.white),
+              style: index == selectedIndex
+              ? TextStyle(fontWeight: FontWeight.bold, color: Colors.white)
+              : TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+               
             ),
           ),
         ),

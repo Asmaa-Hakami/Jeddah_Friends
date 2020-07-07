@@ -1,7 +1,7 @@
 //import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:sample/components/body.dart';
+import 'package:JeddahFriends/components/body.dart';
 
 
 void main() {
@@ -45,10 +45,8 @@ Center(child: Text('المبادرات')),
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(
-        backgroundColor: Colors.white70,
-      ),
-      backgroundColor: Colors.white70,
+      appBar: null,
+      backgroundColor: Colors.white.withOpacity(0.9),
       body: Body(),
       //body: Image.asset('assets/images/background.jpg'),
       bottomNavigationBar: BottomNavigationBar(
@@ -62,6 +60,7 @@ Center(child: Text('المبادرات')),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             title: Text('حسابي'),
+            
           ),
 
             BottomNavigationBarItem(
@@ -71,7 +70,7 @@ Center(child: Text('المبادرات')),
           
           
                     BottomNavigationBarItem(
-            icon: Icon(Icons.lightbulb_outline),
+            icon: Icon(Icons.calendar_today),
             title: Text('المبادرات'),
           ),
         ],

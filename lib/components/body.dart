@@ -13,12 +13,11 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      bottom: false,
+     // bottom: false,
       child: Column(
         children: <Widget>[
           SearchBox(onChanged: (value) {}),
           CategoryList(),
-          
         ],
       ),
     );

@@ -12,24 +12,24 @@ class SearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(20.0),
+      margin: EdgeInsets.all(25.0),
       padding: EdgeInsets.symmetric(
-        horizontal: 20.0,
-        vertical: 20.0 / 4, // 5 top and bottom
+        horizontal: 20.0 / 4,
+        vertical: 1.0 / 4, // 5 top and bottom
       ),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.4),
+        color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
       child: TextField(
         onChanged: onChanged,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.grey),
         decoration: InputDecoration(
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
-          //icon: SvgPicture.asset("assets/icons/search.svg"),
+          icon: Icon(Icons.search),
           hintText: 'البحث عن مبادرة',
-          hintStyle: TextStyle(color: Colors.white),
+          hintStyle: TextStyle(color: Colors.grey),
         ),
       ),
     );
