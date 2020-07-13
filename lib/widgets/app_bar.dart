@@ -28,29 +28,37 @@ class _CustomAppBarState extends State<CustomAppBar> {
           ],   
           title: 
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-              child: Center(child: Text('معاذ عبدالرحمن',textAlign: TextAlign.center,
-              style: TextStyle(
-                                  color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold))),
+              padding: const EdgeInsets.only(top:30.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Text('معاذ عبدالرحمن أحمد',textAlign: TextAlign.center,
+                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold)),
+                ],
+              ),
             ),
           centerTitle: true,
           bottom: PreferredSize(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(120, 0, 120, 20),
-                child: Row(children: <Widget>[
-                  Center(
-                    child: Text(' 12345 ',
-                        style: TextStyle(color: Colors.black, fontSize: 16.0)),
-                  ),
-                  Center(
-                    child: Text(':الرقم التطوعي',
-                        style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold)),
-                  ),
-                ]),
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[          
+                      Text(' 12345 ',
+                         style: TextStyle(color: Colors.black, fontSize: 16.0)),
+                      Text(':الرقم التطوعي',
+                          style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold)),
+                    ]),
+                  ],
+                ),
               ),
               preferredSize: null),
         );
 
   }
 }
-

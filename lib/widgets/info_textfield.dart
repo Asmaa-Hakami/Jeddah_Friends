@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CustomInfoTextField extends StatefulWidget {
-  @override
-  _CustomInfoTextFieldState createState() => _CustomInfoTextFieldState();
-}
 
-class _CustomInfoTextFieldState extends State<CustomInfoTextField> {
+class CustomInfoTextField extends StatelessWidget {
+  String text ;
+ CustomInfoTextField(this.text);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +17,7 @@ class _CustomInfoTextFieldState extends State<CustomInfoTextField> {
                           textAlign: TextAlign.center,
                           maxLines: 1,
                           decoration: InputDecoration(
-                            
+                             hintText: text,
                             filled: true,
                             fillColor: Colors.white,
                             enabledBorder: OutlineInputBorder(
@@ -40,8 +38,6 @@ class _CustomInfoTextFieldState extends State<CustomInfoTextField> {
                           ),
                         ),
                       );
-
-    
-   
   }
 }
+

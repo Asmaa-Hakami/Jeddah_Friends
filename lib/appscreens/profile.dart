@@ -26,67 +26,69 @@ class _ProfileState extends State<Profile> {
                 minimum: EdgeInsets.fromLTRB(0, 25, 30, 0),
                 child: CircleAvatar(
                       backgroundColor: Colors.white,
-                     // minRadius: 20,
-                   //  maxRadius: 20,
                      radius: 20,
                     ),
               ),
             ),
           ],
-          leading: IconButton(
-            icon: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Icon(
+          leading: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              icon: Icon(
                 Icons.exit_to_app,
                 color: Colors.grey,
                 size: 40.0,
               ),
+              onPressed: () {
+                setState(() {
+                  print('logout');
+                });
+              },
             ),
-            onPressed: () {
-              setState(() {
-                print('logout');
-              });
-            },
           ),
           title: Padding(
-            padding: EdgeInsets.all(0),
-            child: Column(children: <Widget>[
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                child: Center(child: Text('أحمدمعاذ عبدالرحمن',textAlign: TextAlign.center,style: TextStyle(
-                                    color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold))),
+            padding: const EdgeInsets.only(top:30.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+              Center(
+                child: Text('معاذ عبدالرحمن أحمد',textAlign: TextAlign.center,style: TextStyle(
+                                    color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold)),
               ),
             ]),
           ),
           bottom: PreferredSize(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(120, 0, 120, 20),
-                child: Row(children: <Widget>[
-                  Center(
-                    child: Text(' 12345 ',textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.black, fontSize: 16.0)),
-                  ),
-                  Center(
-                    child: Text(':الرقم التطوعي',textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold)),
-                  ),
-                ]),
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                      Text(' 12345 ',textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.black, fontSize: 16.0)),
+                      Text(':الرقم التطوعي',textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold)),
+                    ]),
+                  ],
+                ),
               ),
               preferredSize: null 
               ),
         ),
       ),
-      body: Container(
-          margin: EdgeInsets.fromLTRB(0, 25.0, 0, 25.0),
-          color: Colors.white,
-          child: Padding(
-              padding: EdgeInsets.fromLTRB(0, 0, 0, 100),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            height: 400,
+              color: Colors.white,
               child: ListView(
                 children: ListTile.divideTiles(
                   context: context,
                   tiles: [
                     Padding(
-                      padding: EdgeInsets.fromLTRB(10,10,0,10),
+                      padding: const EdgeInsets.only(top:8.0),
                       child: ListTile(
                         title: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -106,7 +108,7 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),      
                     Padding(
-                      padding: EdgeInsets.fromLTRB(10,10,0,10),
+                      padding: const EdgeInsets.only(top:8.0),
                       child: ListTile(
                         title: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -126,7 +128,7 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(10,10,0,10),
+                      padding: const EdgeInsets.only(top:8.0),
                       child: ListTile(
                         title: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -147,7 +149,9 @@ class _ProfileState extends State<Profile> {
                     )
                   ],
                 ).toList(),
-              ))),
+              )),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,

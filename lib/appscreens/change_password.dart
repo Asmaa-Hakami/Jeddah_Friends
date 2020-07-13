@@ -21,11 +21,12 @@ class _ChangePasswordState extends State<ChangePassword> {
       body: Center(
         child: SingleChildScrollView(
           child: Form(
-          //  autovalidate: true,
             key: _formKey,
-            child: Column(children: <Widget>[
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
               Container(
-                margin: EdgeInsets.fromLTRB(20, 10, 20, 40),
                 width: 360,
                 height: 280,
                 decoration: BoxDecoration(
@@ -33,7 +34,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(30, 0, 30, 30),
+                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
@@ -101,6 +102,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                   ),
                 ),
               ),
+              SizedBox(height: 30,),
               SizedBox(
                 width: 360,
                 height: 55,
@@ -109,7 +111,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                     borderRadius: BorderRadius.circular(40),
                   ),
                   color: Color.fromRGBO(85, 177, 200, 1),
-                  padding: EdgeInsets.fromLTRB(10, 2.0, 0, 2.0),
+                  
                   onPressed: () {
                     final form = _formKey.currentState;
                     if (form.validate()) {
@@ -123,65 +125,57 @@ class _ChangePasswordState extends State<ChangePassword> {
                                       BorderRadius.all(Radius.circular(66))),
                               child: Container(
                                 height: 200,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(12.0),
-                                  child: Center(
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Center(
-                                            child: Text(
-                                                "تم تغيير كلمة المرور بنجاح",
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    color: Color.fromRGBO(
-                                                        133, 75, 182, 1),
-                                                    fontSize: 25,
-                                                    fontWeight:
-                                                        FontWeight.bold))),
-                                        SizedBox(height: 15),
-                                        Center(
-                                            child: Text(
-                                                "يمكنك الآن تسجيل الدخول من جديد",
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14))),
-                                        Padding(
-                                          padding: EdgeInsets.fromLTRB(
-                                              50, 30, 50, 0),
-                                          child: Center(
-                                            child: SizedBox(
-                                              width: 130.0,
-                                              child: RaisedButton(
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          15.0),
-                                                ),
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text(
-                                                  "تسجيل الدخول",
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontSize: 17,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                                color: Color.fromRGBO(
-                                                    85, 177, 200, 1),
-                                              ),
+                                child: Center(
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                          child: Text(
+                                              "تم تغيير كلمة المرور بنجاح",
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Color.fromRGBO(
+                                                      133, 75, 182, 1),
+                                                  fontSize: 25,
+                                                  fontWeight:
+                                                      FontWeight.bold))),
+                                      Center(
+                                          child: Text(
+                                              "يمكنك الآن تسجيل الدخول من جديد",
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 14))),
+                                      Center(
+                                        child: SizedBox(
+                                          width: 130.0,
+                                          child: RaisedButton(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                      15.0),
                                             ),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                            child: Text(
+                                              "تسجيل الدخول",
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 17,
+                                                  fontWeight:
+                                                      FontWeight.bold),
+                                            ),
+                                            color: Color.fromRGBO(
+                                                85, 177, 200, 1),
                                           ),
-                                        )
-                                      ],
-                                    ),
+                                        ),
+                                      )
+                                    ],
                                   ),
                                 ),
                               ),
