@@ -4,16 +4,16 @@ import 'package:JeddahFriends/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-// class LoginPage extends StatelessWidget {
-//   static String tag = 'signup-page';
+/* class LoginPage extends StatelessWidget {
+   static String tag = 'signup-page';
 
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: MyHomePage(),
-//     );
-//   }
-// }
+   Widget build(BuildContext context) {
+     return MaterialApp(
+       debugShowCheckedModeBanner: false,
+       home: MyHomePage(),
+     );
+   }
+ }*/
 
 class LoginPage extends StatefulWidget {
   @override

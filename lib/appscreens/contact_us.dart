@@ -1,5 +1,6 @@
 import 'package:JeddahFriends/appscreens/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../main.dart';
 
@@ -38,9 +39,9 @@ class _ContactUsState extends State<ContactUs> {
                 ),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(':نوع الرسالة ',
+                      Text('نوع الرسالة: ',
                           textAlign: TextAlign.right,
                           style: TextStyle(
                               color: Color.fromRGBO(85, 177, 200, 1),
@@ -49,37 +50,11 @@ class _ContactUsState extends State<ContactUs> {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            Container(
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: <Widget>[
-                                    Text('شكوى',
-                                        textAlign: TextAlign.right,
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold)),
-                                    Checkbox(
-                                      value: compCheck,
-                                      onChanged: (bool value) {
-                                        setState(() {
-                                          compCheck = value;
-                                        });
-                                      },
-                                    ),
-                                  ]),
-                            ),
-                            Container(
+                                 Container(
                               child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   children: <Widget>[
-                                    Text('اقتراح',
-                                        textAlign: TextAlign.right,
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold)),
                                     Checkbox(
                                       value: suggCheck,
                                       onChanged: (bool value) {
@@ -88,12 +63,40 @@ class _ContactUsState extends State<ContactUs> {
                                         });
                                       },
                                     ),
+                                    Text('اقتراح',
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold)),
+                                    
+                                  ]),
+                            ),
+                            Container(
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: <Widget>[
+                                     Checkbox(
+                                      value: compCheck,
+                                      onChanged: (bool value) {
+                                        setState(() {
+                                          compCheck = value;
+                                        });
+                                      },
+                                    ),
+                                    Text('شكوى',
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold)),
+                                   
                                   ]),
                             ),
                           ]),
                       Padding(
                         padding: EdgeInsets.only(top: 15),
-                        child: Text(':الرسالة',
+                        child: Text('الرسالة:',
                             textAlign: TextAlign.right,
                             style: TextStyle(
                                 color: Color.fromRGBO(85, 177, 200, 1),
@@ -120,6 +123,7 @@ class _ContactUsState extends State<ContactUs> {
                                     BorderSide(color: Colors.black, width: 0.5),
                               ),
                               hintText: 'اكتب هنا',
+                              
                               contentPadding:
                                   EdgeInsets.symmetric(vertical: 10),
                               errorStyle: TextStyle(fontSize: 16.0),
@@ -243,7 +247,7 @@ class _ContactUsState extends State<ContactUs> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         items: [
-      BottomNavigationBarItem(
+           BottomNavigationBarItem(
             icon: Icon(
               Icons.calendar_today,
               color: Color.fromRGBO(126, 126, 126, 1),
@@ -263,7 +267,7 @@ class _ContactUsState extends State<ContactUs> {
                 style: TextStyle(
                     color: Color.fromRGBO(126, 126, 126, 1), fontSize: 20.0)),
           ),
-          BottomNavigationBarItem(
+                 BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
               color: Color.fromRGBO(126, 126, 126, 1),
@@ -273,6 +277,7 @@ class _ContactUsState extends State<ContactUs> {
                 style: TextStyle(
                     color: Color.fromRGBO(126, 126, 126, 1), fontSize: 20.0)),
           ),
+      
         ],
         onTap: (index) {
           setState(() {
@@ -281,22 +286,20 @@ class _ContactUsState extends State<ContactUs> {
             switch(_currentIndex)
           {
           case 0:
-          Navigator.push(
+                   Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => MyHomePage()));
-                                      break;
+       
+                                 break; 
           case 1:
-                       Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ContactUs()));
+                      
                                       break;  
           case 2: 
-                    Navigator.push(
+                        Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Profile())); 
+                                      builder: (context) => Profile()));
                                       break;
                                                      
                                       default:

@@ -98,22 +98,18 @@ int _currentIndex = 0;
             switch(_currentIndex)
           {
           case 0:
-          Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => MyHomePage()));
-                                      break;
+                  break;
           case 1:
-                       Navigator.push(
+                        Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => ContactUs()));
                                       break;  
           case 2: 
-                    Navigator.push(
+                     Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Profile())); 
+                                      builder: (context) => Profile()));
                                       break;
                                                      
                                       default:

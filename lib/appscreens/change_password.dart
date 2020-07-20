@@ -1,3 +1,4 @@
+import 'package:JeddahFriends/loginnew.dart';
 import 'package:JeddahFriends/signup.dart';
 import 'package:JeddahFriends/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
@@ -163,7 +164,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                                 Navigator.push(
                                                 context,
                                                 MaterialPageRoute(
-                                                builder: (context) => Signup()));                                             },
+                                                builder: (context) => LoginPage()));                                             },
                                             child: Text(
                                               "تسجيل الدخول",
                                               textAlign: TextAlign.center,
@@ -201,17 +202,18 @@ class _ChangePasswordState extends State<ChangePassword> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(
+items: [
+               BottomNavigationBarItem(
             icon: Icon(
-              Icons.person,
+              Icons.calendar_today,
               color: Color.fromRGBO(126, 126, 126, 1),
               size: 35.0,
             ),
-            title: Text('حسابي',
+            title: new Text('المبادرات',
                 style: TextStyle(
                     color: Color.fromRGBO(126, 126, 126, 1), fontSize: 20.0)),
           ),
+     
           BottomNavigationBarItem(
             icon: Icon(
               Icons.add_call,
@@ -222,18 +224,20 @@ class _ChangePasswordState extends State<ChangePassword> {
                 style: TextStyle(
                     color: Color.fromRGBO(126, 126, 126, 1), fontSize: 20.0)),
           ),
-          BottomNavigationBarItem(
+      
+             BottomNavigationBarItem(
             icon: Icon(
-              Icons.calendar_today,
+              Icons.person,
               color: Color.fromRGBO(126, 126, 126, 1),
               size: 35.0,
             ),
-            title: new Text('المبادرات',
+            title: Text('حسابي',
                 style: TextStyle(
                     color: Color.fromRGBO(126, 126, 126, 1), fontSize: 20.0)),
           ),
+     
         ],
-        onTap: (index) {
+          onTap: (index) {
           setState(() {
             _currentIndex = index;
           });

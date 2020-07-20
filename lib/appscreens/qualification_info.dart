@@ -27,20 +27,22 @@ final _formKey = GlobalKey<FormState>();
                     children: <Widget>[
               Padding(
                 padding: const  EdgeInsets.only(right:16),
-                child: Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
+                child: Row(mainAxisAlignment: MainAxisAlignment.start, 
+                children: <Widget>[
+                  Icon(
+                Icons.school,
+                color: Color.fromRGBO(126, 126, 126, 1),
+                size: 40.0,
+                    ),
                     Text(' المؤهل العلمي :',
                   style: TextStyle(color: Colors.black, fontSize: 23.0,
                             fontWeight: FontWeight.bold)),
                     SizedBox(width: 10),
-                    Icon(
-                Icons.school,
-                color: Color.fromRGBO(126, 126, 126, 1),
-                size: 40.0,
-                    )
+                    
                   ]),
               ),
               Container(
-                margin: EdgeInsets.all(10),
+                margin: EdgeInsets.all(8),
                 width: 360,
                 height: 280,
                 decoration: BoxDecoration(
@@ -49,7 +51,7 @@ final _formKey = GlobalKey<FormState>();
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(13),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,45 +60,48 @@ final _formKey = GlobalKey<FormState>();
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                             CustomInfoTextField("بكالوريوس"),     
-                    SizedBox(
-                      width: 20,
-                    ),
                             Text('المستوى العلمي',textAlign: TextAlign.right,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold)),
+                             CustomInfoTextField("بكالوريوس"),     
+                    SizedBox(
+                      width: 20,
+                    ),
+                            
                           ],
                         ),
                       
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                             CustomInfoTextField("حاسب آلي"),     
-                    SizedBox(
-                      width: 20,
-                    ),
                             Text('التخصص',textAlign: TextAlign.right,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold)),
+                             CustomInfoTextField("حاسب آلي"),     
+                    SizedBox(
+                      width: 20,
+                    ),
+                            
                           ],
                         ),
                       
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                             CustomInfoTextField("موظف"),     
-                    SizedBox(
-                      width: 20,
-                    ),
                             Text('المهنة',textAlign: TextAlign.right,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold)),
+                             CustomInfoTextField("موظف"),     
+                    SizedBox(
+                      width: 20,
+                    ),
+                            
                           ],
                         ),
                       ]),
@@ -107,6 +112,39 @@ final _formKey = GlobalKey<FormState>();
                  child: Row(
                      mainAxisAlignment: MainAxisAlignment.center,
                      children: <Widget>[
+                       SizedBox(
+                         width: 150,
+                         child: FlatButton(
+                           shape: RoundedRectangleBorder(
+                             borderRadius: BorderRadius.circular(18.0),
+                           ),
+                           color: Color.fromRGBO(85, 177, 200, 1),
+                           textColor: Colors.black,
+                          
+                           onPressed: () {
+                             print("السابق");
+
+                           },
+                           child: Row(
+                               mainAxisAlignment: MainAxisAlignment.center,
+                               children: <Widget>[
+                                 Icon(
+                                   Icons.arrow_back_ios,
+                                   color: Colors.black,
+                                   size: 15.0,
+                                 ),
+                                 Text('السابق',
+                                     style:
+                                         TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+                                 SizedBox(width: 8),
+                                 
+                               ]),
+                         ),
+
+                       ),
+                       SizedBox(
+                         width: 50,
+                       ),
                        SizedBox(
                          width: 150,
                          child: FlatButton(
@@ -174,36 +212,7 @@ final _formKey = GlobalKey<FormState>();
                                          TextStyle(color: Colors.white, fontSize: 20,   fontWeight: FontWeight.bold)),
                                ]),
                          ),
-                       ),
-                       SizedBox(
-                         width: 50,
-                       ),
-                       SizedBox(
-                         width: 150,
-                         child: FlatButton(
-                           shape: RoundedRectangleBorder(
-                             borderRadius: BorderRadius.circular(18.0),
-                           ),
-                           color: Color.fromRGBO(85, 177, 200, 1),
-                           textColor: Colors.black,
-                          
-                           onPressed: () {
-                             print("السابق");
-                           },
-                           child: Row(
-                               mainAxisAlignment: MainAxisAlignment.center,
-                               children: <Widget>[
-                                 Text('السابق',
-                                     style:
-                                         TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-                                 SizedBox(width: 8),
-                                 Icon(
-                                   Icons.arrow_forward_ios,
-                                   color: Colors.black,
-                                   size: 15.0,
-                                 ),
-                               ]),
-                         ),
+                         
                        ),
                      ]),
                ),

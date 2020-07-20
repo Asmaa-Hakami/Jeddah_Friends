@@ -78,10 +78,6 @@ class _SignupState extends State<Signup> {
                         children: <Widget>[
                           InkWell(
                             onTap: () {
-                            //  Navigator.pushReplacement(
-                              //    context,
-                                //  MaterialPageRoute(
-                                  //    builder: (context) => LoginPage()));
                                   Navigator.pop(context);
                             },
                             child: Container(

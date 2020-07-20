@@ -31,19 +31,22 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   Padding(
                     padding: const EdgeInsets.only(right:16),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          Text('البيانات الشخصية :',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 23.0,
-                                  fontWeight: FontWeight.bold)),
-                          SizedBox(width: 10),
-                          Icon(
+                            Icon(
                             Icons.folder_shared,
                             color: Color.fromRGBO(126, 126, 126, 1),
                             size: 40.0,
-                          )
+                          ),
+                           Padding(
+                             padding: const EdgeInsets.only(right:15.0, top: 5),
+                          child: Text('البيانات الشخصية :',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 23.0,
+                                  fontWeight: FontWeight.bold)),),
+                          SizedBox(width: 10),
+
                         ]),
                   ),
                   Container(
@@ -55,7 +58,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(15),
+                      padding: EdgeInsets.all(13),
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,151 +66,162 @@ class _PersonalInfoState extends State<PersonalInfo> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("معاذ عبدالرحمن أحمد"),
-                                SizedBox(
-                                  width: 20,
-                                ),
                                 Text('الاسم الثلاثي',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("معاذ عبدالرحمن أحمد"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("12345"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Text('الرقم التطوعي',
+                                    Text('الرقم التطوعي',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+
+                                CustomInfoTextField("12345"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("28 / 2 / 2020"),
-                                SizedBox(
-                                  width: 20,
-                                ),
                                 Text('تاريخ الانضمام',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("28 / 2 / 2020"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("سعودي"),
-                                SizedBox(
-                                  width: 20,
-                                ),
                                 Text('الجنسية',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("سعودي"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("ذكر"),
-                                SizedBox(
-                                  width: 20,
-                                ),
                                 Text('الجنس',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("ذكر"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("1100278399"),
-                                SizedBox(
-                                  width: 20,
-                                ),
                                 Text('رقم الهوية',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("1100278399"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("21 / 2 / 1997"),
-                                SizedBox(
-                                  width: 20,
-                                ),
                                 Text('سنة الميلاد',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("21 / 2 / 1997"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("النسيم"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Text('الحي',
+                                 Text('الحي',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("النسيم"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                               
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("O+"),
-                                SizedBox(
-                                  width: 20,
-                                ),
                                 Text('فصيلة الدم',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("O+"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                CustomInfoTextField("لا يوجد"),
-                                SizedBox(
-                                  width: 20,
-                                ),
                                 Text('مشاكل صحية',
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
+                                CustomInfoTextField("لا يوجد"),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                
                               ],
                             ),
                           ]),
@@ -216,40 +230,6 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        SizedBox(
-                          width: 150,
-                          child: FlatButton(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                            ),
-                            color: Color.fromRGBO(85, 177, 200, 1),
-                            textColor: Colors.black,         
-                            onPressed: () {
-                             Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ContactInfo())); 
-                            },
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,      
-                                children: <Widget>[
-                                  Icon(
-                                    Icons.arrow_back_ios,
-                                    color: Colors.black,
-                                    size: 15.0,
-                                  ),
-                                  SizedBox(width: 8),
-                                  Text('التالي',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold)),
-                                ]),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 50,
-                        ),
                         SizedBox(
                           width: 150,
                           child: FlatButton(
@@ -272,6 +252,43 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                           fontWeight: FontWeight.bold)),
                                 ]),
                           ),
+                          
+                        ),
+                        SizedBox(
+                          width: 50,
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child: FlatButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                            ),
+                            color: Color.fromRGBO(85, 177, 200, 1),
+                            textColor: Colors.black,         
+                            onPressed: () {
+                             Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ContactInfo())); 
+                            },
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,      
+                                children: <Widget>[
+                                  SizedBox(width: 8),
+                                  Text('التالي',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold)),
+                                          
+                                           Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Colors.black,
+                                    size: 15.0,
+                                  ),
+                                ]),
+                          ),
+                          
                         ),
                       ]),
                 ]),

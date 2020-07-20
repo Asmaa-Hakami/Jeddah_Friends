@@ -29,16 +29,18 @@ class _ContactInfoState extends State<ContactInfo> {
               Padding(
                 padding: EdgeInsets.only(right:16),
                 child:
-                    Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
+                    Row(mainAxisAlignment: MainAxisAlignment.start, 
+                    children: <Widget>[
+                       Icon(
+                    Icons.forum,
+                    color: Color.fromRGBO(126, 126, 126, 1),
+                    size: 40.0,
+                  ),
                   Text('بيانات الاتصال :',
                       style: TextStyle(color: Colors.black, fontSize: 23.0,
                                 fontWeight: FontWeight.bold)),
                   SizedBox(width: 10),
-                  Icon(
-                    Icons.forum,
-                    color: Color.fromRGBO(126, 126, 126, 1),
-                    size: 40.0,
-                  )
+                 
                 ]),
               ),
               Container(
@@ -50,7 +52,7 @@ class _ContactInfoState extends State<ContactInfo> {
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(8),
                   child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -58,30 +60,32 @@ class _ContactInfoState extends State<ContactInfo> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                              CustomInfoTextField("+966505557790"),     
-                    SizedBox(
-                      width: 20,
-                    ),
                             Text('رقم الجوال',textAlign: TextAlign.right,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold)),
+                              CustomInfoTextField("+966505557790"),     
+                    SizedBox(
+                      width: 20,
+                    ),
+                            
                           ],
                         ),
                     
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                              CustomInfoTextField("Muath_90@gmail.com"),     
-                    SizedBox(
-                      width: 20,
-                    ),
                             Text('البريد الإلكتروني',textAlign: TextAlign.right,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold)),
+                              CustomInfoTextField("Muath_90@gmail.com"),     
+                    SizedBox(
+                      width: 20,
+                    ),
+                            
                           ],
                         ),
                      
@@ -94,45 +98,48 @@ class _ContactInfoState extends State<ContactInfo> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                              CustomInfoTextField("عبدالرحمن احمد"),     
-                    SizedBox(
-                      width: 20,
-                    ),
                             Text('الاسم',textAlign: TextAlign.right,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold)),
+                              CustomInfoTextField("عبدالرحمن احمد"),     
+                    SizedBox(
+                      width: 20,
+                    ),
+                            
                           ],
                         ),
                       
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                              CustomInfoTextField("الوالد"),     
-                    SizedBox(
-                      width: 20,
-                    ),
                             Text('صلة القرابة',textAlign: TextAlign.right,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold)),
+                              CustomInfoTextField("الوالد"),     
+                    SizedBox(
+                      width: 20,
+                    ),
+                            
                           ],
                         ),
                      
                         Row(
                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                               CustomInfoTextField("+966545598291"),     
-                    SizedBox(
-                      width: 20,
-                    ),
                             Text('رقم الجوال',textAlign: TextAlign.right,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold)),
+                               CustomInfoTextField("+966545598291"),     
+                    SizedBox(
+                      width: 20,
+                    ),
+                            
                           ],
                         ),
                       ]),
@@ -168,11 +175,9 @@ class _ContactInfoState extends State<ContactInfo> {
                         ),
                         color: Color.fromRGBO(85, 177, 200, 1),
                         textColor: Colors.black,
+                      
                         onPressed: () {
-                         Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => QualificationInfo())); 
+                        Navigator.pop(context);
                         },
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -182,12 +187,14 @@ class _ContactInfoState extends State<ContactInfo> {
                                 color: Colors.black,
                                 size: 15.0,
                               ),
-                              SizedBox(width: 8),
-                              Text('التالي',
+                              Text('السابق',
                                   style:
-                                      TextStyle(color: Colors.white, fontSize: 20,   fontWeight: FontWeight.bold)),
+                                      TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+                              SizedBox(width: 8),
+                              
                             ]),
                       ),
+                      
                     ),
                     SizedBox(
                       width: 50,
@@ -200,24 +207,28 @@ class _ContactInfoState extends State<ContactInfo> {
                         ),
                         color: Color.fromRGBO(85, 177, 200, 1),
                         textColor: Colors.black,
-                      
                         onPressed: () {
-                        
+                         Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => QualificationInfo())); 
                         },
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Text('السابق',
-                                  style:
-                                      TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+                              
                               SizedBox(width: 8),
-                              Icon(
+                              Text('التالي',
+                                  style:
+                                      TextStyle(color: Colors.white, fontSize: 20,   fontWeight: FontWeight.bold)),
+                                      Icon(
                                 Icons.arrow_forward_ios,
                                 color: Colors.black,
                                 size: 15.0,
                               ),
                             ]),
                       ),
+                      
                     ),
                   ]),
             ]),

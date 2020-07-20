@@ -2,7 +2,7 @@ import 'package:JeddahFriends/appscreens/change_password.dart';
 import 'package:JeddahFriends/appscreens/personal_info.dart';
 import 'package:JeddahFriends/my_initiative.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
 import '../main.dart';
 import 'contact_us.dart';
 
@@ -97,23 +97,23 @@ class _ProfileState extends State<Profile> {
                       padding: const EdgeInsets.only(top:8.0),
                       child: ListTile(
                         title: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
-                              Text('مبادراتي',textAlign: TextAlign.right,
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 23.0, fontWeight: FontWeight.bold)),
-                            ]),
-                        trailing: Icon(
+                               Icon(
                           Icons.list,
                           color: Color.fromRGBO(126, 126, 126, 1),
                           size: 45.0,
                         ),
+                        Padding(
+                             padding: const EdgeInsets.only(right:15.0, top: 5),
+                             child: Text('مبادراتي',textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 23.0, fontWeight: FontWeight.bold)),),
+                            ]),
+                        
                         onTap: () {
-                          print('مبادراتي');
-                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => MyInitiatives()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => MyInitiatives()));
+                          
                         },
                       ),
                     ),      
@@ -121,17 +121,20 @@ class _ProfileState extends State<Profile> {
                       padding: const EdgeInsets.only(top:8.0),
                       child: ListTile(
                         title: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
-                              Text('تحديث البيانات',textAlign: TextAlign.right,
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 23.0, fontWeight: FontWeight.bold)),
-                            ]),
-                        trailing: Icon(
+                               Icon(
                           Icons.create,
                           color: Color.fromRGBO(126, 126, 126, 1),
                           size: 45.0,
                         ),
+                        Padding(
+                             padding: const EdgeInsets.only(right:15.0, top: 5),
+                              child: Text('تحديث البيانات',textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 23.0, fontWeight: FontWeight.bold)),),
+                            ]),
+                        
                         onTap: () {
                           print('تعديل البيانات');
                                Navigator.push(
@@ -141,21 +144,25 @@ class _ProfileState extends State<Profile> {
                         },
                       ),
                     ),
+                    
                     Padding(
                       padding: const EdgeInsets.only(top:8.0),
                       child: ListTile(
                         title: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
-                              Text('تغيير كلمة المرور',textAlign: TextAlign.right,
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 23.0, fontWeight: FontWeight.bold)),
-                            ]),
-                        trailing: Icon(
+                            Icon(
                           Icons.vpn_key,
                           color: Color.fromRGBO(126, 126, 126, 1),
                           size: 45.0,
                         ),
+                             Padding(
+                             padding: const EdgeInsets.only(right:15.0, top: 5),
+                              child: Text('تغيير كلمة المرور',textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 23.0, fontWeight: FontWeight.bold)),),
+                            ]),
+                        
                         onTap: () {
                           print('تغيير كلمة المرور');
                                Navigator.push(
@@ -174,7 +181,7 @@ class _ProfileState extends State<Profile> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         items: [
-      BottomNavigationBarItem(
+               BottomNavigationBarItem(
             icon: Icon(
               Icons.calendar_today,
               color: Color.fromRGBO(126, 126, 126, 1),
@@ -184,6 +191,7 @@ class _ProfileState extends State<Profile> {
                 style: TextStyle(
                     color: Color.fromRGBO(126, 126, 126, 1), fontSize: 20.0)),
           ),
+     
           BottomNavigationBarItem(
             icon: Icon(
               Icons.add_call,
@@ -194,7 +202,8 @@ class _ProfileState extends State<Profile> {
                 style: TextStyle(
                     color: Color.fromRGBO(126, 126, 126, 1), fontSize: 20.0)),
           ),
-          BottomNavigationBarItem(
+      
+             BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
               color: Color.fromRGBO(126, 126, 126, 1),
@@ -204,6 +213,7 @@ class _ProfileState extends State<Profile> {
                 style: TextStyle(
                     color: Color.fromRGBO(126, 126, 126, 1), fontSize: 20.0)),
           ),
+     
         ],
         onTap: (index) {
           setState(() {
@@ -212,22 +222,20 @@ class _ProfileState extends State<Profile> {
             switch(_currentIndex)
           {
           case 0:
-          Navigator.push(
+                   Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => MyHomePage()));
+          
                                       break;
           case 1:
                        Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => ContactUs()));
-                                      break;  
+                                 break;  
           case 2: 
-                    Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Profile())); 
+           
                                       break;
                                                      
                                       default:

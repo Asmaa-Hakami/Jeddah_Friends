@@ -103,11 +103,6 @@ class _MyHomePageState extends State<RecoveryPaasword> {
                         children: <Widget>[
                           InkWell(
                             onTap: () {
-                              //jjp########################يرجع ل login
-                              //Navigator.push(
-                                //  context,
-                                  //MaterialPageRoute(
-                                    //  builder: (context) => LoginPage()));
                                     Navigator.pop(context);
                             },
                             child: Container(

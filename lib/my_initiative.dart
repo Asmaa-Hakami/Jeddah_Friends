@@ -1,7 +1,7 @@
 import 'package:JeddahFriends/appscreens/profile.dart';
 import 'package:JeddahFriends/components/search_box.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'appscreens/contact_us.dart';
 import 'main.dart';
 

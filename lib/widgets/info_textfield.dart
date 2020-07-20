@@ -10,7 +10,7 @@ class CustomInfoTextField extends StatelessWidget {
                         width: 210,
                         child: TextFormField(
                         
-                               textDirection: TextDirection.rtl,
+                               textDirection: TextDirection.ltr,
                            textAlignVertical: TextAlignVertical.center,
                           style: TextStyle( 
                               fontSize: 14, height: 0, color: Colors.black),
